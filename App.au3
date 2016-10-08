@@ -39,6 +39,8 @@ Func SetStatusLabel($status)
 EndFunc
 
 Func MainLoop()
+	Sleep(5000)
+	Send("{SPACE}")
 	While True
 		If WinActive("Nox") <> 0 Then
 			WaitRandom()

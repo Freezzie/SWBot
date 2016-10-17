@@ -225,7 +225,7 @@
 ;~ 	Return $result
 ;~ EndFunc
 
-Func RandomClick($minX = 150, $maxX = 900, $minY = 150, $maxY = 550)
+Func RandomClick($minX = 180, $maxX = 1100, $minY = 130, $maxY = 620)
 	$randomVictoryX = Random($minX, $maxX, 1)
 	$randomVictoryY = Random($minY, $maxY, 1)
 	Return MouseClick("", $randomVictoryX, $randomVictoryY )

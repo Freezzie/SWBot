@@ -42,24 +42,22 @@ Func MainLoop()
 	Sleep(5000)
 	Send("{SPACE}")
 	While True
-		If WinActive("Nox") <> 0 Then
-			WaitRandom()
-			SetStatusLabel("Wait BattleStart")
-			ClickTo("All", "BattleStart")
-			SetStatusLabel("Wait Victory")
-			WaitForPixlesCheck("All", "Victory")
-			SetStatusLabel("Wait Victory Approve")
-			WaitRandom()
-			RandomClick() ; Victory approve
-			SetStatusLabel("Wait For Chest")
-			WaitForPixlesNotCheck("All", "Victory") ;wait for chest - not Victory SCreen
-			SetStatusLabel("Wait For Open Chest")
-			WaitRandom(2000,3000)
-			RandomClick() ; Open reward
-			WaitRandom(2500,3500)
-			SendESC() ; Send reward to inv
-			BattleAgain()
-		EndIf
+		WaitRandom()
+		SetStatusLabel("Wait BattleStart")
+		ClickTo("All", "BattleStart")
+		SetStatusLabel("Wait Victory")
+		WaitForPixlesCheck("All", "Victory")
+		SetStatusLabel("Wait Victory Approve")
+		WaitRandom()
+		RandomClick() ; Victory approve
+		SetStatusLabel("Wait For Chest")
+		WaitForPixlesNotCheck("All", "Victory") ;wait for chest - not Victory SCreen
+		SetStatusLabel("Wait For Open Chest")
+		WaitRandom(2000,3000)
+		RandomClick() ; Open reward
+		WaitRandom(2500,3500)
+		SendESC() ; Send reward to inv
+		BattleAgain()
 	WEnd
 EndFunc
 

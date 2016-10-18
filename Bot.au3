@@ -225,7 +225,7 @@
 ;~ 	Return $result
 ;~ EndFunc
 
-Func RandomClick($minX = 180, $maxX = 1100, $minY = 130, $maxY = 620)
+Func RandomClick($minX = 150, $maxX = 885, $minY = 100, $maxY = 450)
 	$randomVictoryX = Random($minX, $maxX, 1)
 	$randomVictoryY = Random($minY, $maxY, 1)
 	Return MouseClick("", $randomVictoryX, $randomVictoryY )
@@ -275,7 +275,7 @@ Func ClickTo($fileName, $section, $timeOutMin=500, $timeOutMax=1500, $offsetX=10
 	EndIf
 EndFunc
 
-Func WaitRandom($min=500, $max=1500)
+Func WaitRandom($min=500, $max=1000)
 	Sleep(Random($min,$max,1))
 EndFunc
 
